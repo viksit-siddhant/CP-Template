@@ -11,6 +11,7 @@ using namespace __gnu_pbds;
 #define ordered_set(type) tree<type, null_type,less_equal<type>, rb_tree_tag,tree_order_statistics_node_update>
 #define MOD 998244353
 #define endl '\n'
+#define invec(a,k) vector<long long> a(k);for (int i = 0; i < k;i++) cin >> a[i]
 typedef long long ll;
  
 void print(vector<int> v) {
@@ -50,6 +51,10 @@ void print(string s) {
     cout << s << endl;
 }
 
+void print(string s, int c) {
+    cout << s << " " << c << endl;
+}
+
 void print(pair<int,int> a) {
     cout << a.first << " " << a.second << endl;
 }
@@ -71,22 +76,8 @@ int gcd(int a, int b) {
     return gcd(b, a%b);
 }
 
-vector<int> sieve(int n) {
-    vector<int> primes;
-    vector<bool> isPrime(n, true);
-    for (int i = 2; i < n; i++) {
-        if (isPrime[i]) {
-            primes.push_back(i);
-            for (int j = i; j < n; j += i) {
-                isPrime[j] = false;
-            }
-        }
-    }
-    return primes;
-}
-
 void solve() {
-
+    in1(n);
 }
 
 int main() {
@@ -95,7 +86,8 @@ int main() {
         freopen("input.txt", "r", stdin);
         freopen("output.txt", "w", stdout);
     #endif    
-    int cases = 0;
+    int cases = 1;
+  //  cout << check({-1,-1, -1,-1 ,-1,3}) << endl;
     if (cases) {
         int t;
         cin >> t;
